@@ -12,9 +12,11 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                cd myapp
-                pip install --break-system-packages -r requirements.txt
-                '''
+                dir('myapp') {
+                        sh 'pip install --break-system-packages -r requirements.txt'
+                    }
+
+             
             }
         }
         stage('Test') {
