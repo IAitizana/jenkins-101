@@ -1,10 +1,9 @@
 pipeline {
-    agent {
-        docker {
-            image 'ismail01/jenkins-agent-python'
+   agent { 
+        node {
             label 'docker-merde'
-        }
-    }
+            }
+      }
 
     triggers {
         pollSCM('* * * * *')
