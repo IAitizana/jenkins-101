@@ -27,6 +27,7 @@ pipeline {
                 python3 hello.py
                 python3 hello.py --name=Brad
                 '''
+                 }
             }
         }
         stage('Deliver') {
